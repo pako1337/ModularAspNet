@@ -1,0 +1,10 @@
+﻿@using ModularAspNet.ModuleContracts
+
+@model IEnumerable<IMainMenuLink>
+
+@foreach (var menu in Model)
+{
+    <li>
+        <a href="@Url.Content(menu.Url)">@menu.DisplayName</a>
+    </li>
+}
